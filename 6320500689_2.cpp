@@ -9,7 +9,7 @@ int main ()
 		char a[2][n];
 		for (i=0; i<2; i++)
 		{
-			scanf ("%[^\n]s",a[i]);
+			scanf (" %[^\n]s",a[i]);
 		}
 		for (j=0; j<n; j++)
 		{
