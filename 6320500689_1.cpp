@@ -16,6 +16,17 @@ int main ()
 		if (a[i][0]>90)
 			a[i][0]-=32;
 	}
+	for (i=0; i<n; i++)
+	{
+		if (a[i][0] > a[i+1][1])
+		{
+			strcpy (b[i],a[i]);
+			strcpy (a[i],a[i+1]);
+			printf ("%s =",a[i]);
+			strcpy (a[i+1],b[i]);
+			printf ("%s\n =",a[i+1]);
+		}
+	}
 	printf ("\n");
 	for (i=0; i<=n; i++)
 	{
