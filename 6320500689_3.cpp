@@ -32,11 +32,9 @@ int main()
 					max = c[j];
 				}
 			}
-			y[b]=max;
-            b++;
-			
-		}
 		printf ("%ld\n",max);
+		}
+		
 	}
 	return 0;
 }
