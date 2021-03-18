@@ -7,7 +7,7 @@ int main ()
 	if (n>=1 && n<=10000)
 	{
 		char a[n][100];
-		char b[100][100];
+		char b[n][100];
 		for (i=0; i<n; i++)
 		{
 			scanf (" %[^\n]s",a[i]);
@@ -20,18 +20,19 @@ int main ()
 				{
 					if (a[i][k] > a[j][k])
 					{
-						strcpy (b[i],a[k]);
-						strcpy (a[k],a[i]);
+						strcpy (b[i],a[j]);
+						strcpy (a[j],a[i]);
 						strcpy (a[i],b[i]);
+						break;
 					}
-					else if(a[i][k] == a[j][k])
+					else if (a[i][k] == a[j][k])
                     {
                         k++;
                     }
                     else break;
 				}
 			}
-			for (i=0; i<=n; i++)
+			for (i=0; i<n; i++)
 			{
 				printf ("%s\n",a[i]);	
 			}
