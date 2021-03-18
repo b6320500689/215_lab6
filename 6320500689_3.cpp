@@ -1,12 +1,17 @@
 #include<stdio.h>
 int main()
 {
-	long i,j,k,n,q,max;
+	long i,j,k,n,q,max,b=0;
 	scanf("%ld %ld",&n,&q);
 	char a[n];
 	long c[n]={};
 	long x[q],y[q];
 	
+	for(i=0; i<n; i++)
+    {
+        a[i]=0;
+        c[i]=0;
+    }
 	for (i=0; i<q; i++)
 	{
 		scanf (" %c %ld %ld",&a[i],&x[i],&y[i]);
@@ -27,8 +32,11 @@ int main()
 					max = c[j];
 				}
 			}
-			printf ("%ld\n",max);
+			y[b]=max;
+            b++;
+			
 		}
+		printf ("%ld\n",max);
 	}
 	return 0;
 }
