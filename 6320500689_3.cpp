@@ -1,40 +1,37 @@
 #include<stdio.h>
 int main()
 {
-	long i,j,k,n,q,max,b=0;
-	scanf("%ld %ld",&n,&q);
-	char a[n];
-	long c[n]={};
-	long x[q],y[q];
+	int i,j,k,n,q,b,c,max,l;
+	scanf("%d %d",&n,&q);
+	char a;
+	int x[n],y[n];
 	
-	for(i=0; i<n; i++)
+	for(j=0; j<n; j++)
     {
-        a[i]=0;
-        c[i]=0;
+        x[j]=0;
+        y[j]=0;
     }
-	for (i=0; i<q; i++)
+	for (j=0; j<q; j++)
 	{
-		scanf (" %c %ld %ld",&a[i],&x[i],&y[i]);
-	}
-	for (i=0; i<q; i++)
-	{
-		if (a[i] == 'U')
+		scanf (" %c %ld %ld",&a,&b,&c);
+		if (a == 'U')
 		{
-			c[x[i]] = y[i];
+			x[i-1] = c;
 		}
-		else if (a[i] == 'P')
+		else if (a == 'P')
 		{
-			max = c[x[i]];
-			for (j=x[i]; j<=y[i]; j++)
+			max = x[i-1];
+			for (k=i; k<c; k++)
 			{
-				if (max < c[j])
+				if (max < x[c])
 				{
-					max = c[j];
+					max = x[c];
 				}
 			}
-		printf ("%ld\n",max);
+			y[l]=max;
+            l++;
 		}
-		
+		printf ("%ld\n",max);
 	}
 	return 0;
 }
