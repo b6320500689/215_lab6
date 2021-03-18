@@ -16,11 +16,11 @@ int main()
 		scanf (" %c %d %d",&a,&b,&c);
 		if (a == 'U')
 		{
-			x[i-1] = c;
+			x[b-1] = c;
 		}
 		else if (a == 'P')
 		{
-			max = x[i-1];
+			max = x[b-1];
 			for (k=i; k<c; k++)
 			{
 				if (max < x[k])
