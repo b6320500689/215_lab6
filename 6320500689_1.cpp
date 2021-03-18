@@ -17,6 +17,10 @@ int main ()
 			a[i][0]-=32;
 	}
 	printf ("\n");
-	printf ("%s\n",a[i]);
+	for (i=0; i<=n; i++)
+	{
+		printf ("%s\n",a[i]);	
+	}
+	
 	return 0;
 }
