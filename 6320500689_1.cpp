@@ -2,36 +2,39 @@
 #include <string.h>
 int main ()
 {
-	int n,i,j;
+	int n,i,j,k=0;
 	scanf ("%d",&n);
-	char a[n][100];
-	char b[100][100];
-	for (i=0; i<n; i++)
+	if (n>=1 && n<=10000)
 	{
-		scanf ("%s",a[i]);
-		
-	}
-	for (i=0; i<n; i++)
-	{
-		if (a[i][0]>90)
-			a[i][0]-=32;
-	}
-	for (i=0; i<n; i++)
-	{
-		if (a[i][0] > a[i+1][1])
+		char a[n][100];
+		char b[100][100];
+		for (i=0; i<n; i++)
 		{
-			strcpy (b[i],a[i]);
-			strcpy (a[i],a[i+1]);
-			printf ("%s =",a[i]);
-			strcpy (a[i+1],b[i]);
-			printf ("%s\n =",a[i+1]);
+			scanf (" %[^\n]s",a[i]);
+		
 		}
+		for (i=0; i<n; i++)
+			for (j=0; j<i; j++)
+			{
+				for (k=0; k<1000; )
+				{
+					if (a[i][k] > a[j][k])
+					{
+						strcpy (b[i],a[k]);
+						strcpy (a[k],a[i]);
+						strcpy (a[i],b[i]);
+					}
+					else if(a[i][k] == a[j][k])
+                    {
+                        k++;
+                    }
+                    else break;
+				}
+			}
+			for (i=0; i<=n; i++)
+			{
+				printf ("%s\n",a[i]);	
+			}
 	}
-	printf ("\n");
-	for (i=0; i<=n; i++)
-	{
-		printf ("%s\n",a[i]);	
-	}
-	
 	return 0;
 }
