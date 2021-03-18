@@ -21,7 +21,7 @@ int main()
 		else if (a == 'P')
 		{
 			max = x[b-1];
-			for (k=i; k<c; k++)
+			for (k=b; k<c; k++)
 			{
 				if (max < x[k])
 				{
