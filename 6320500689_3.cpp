@@ -9,7 +9,7 @@ int main()
 	
 	for (i=0; i<q; i++)
 	{
-		scanf ("%c %ld %ld",&a[i],&x[i],&y[i]);
+		scanf (" %c %ld %ld",&a[i],&x[i],&y[i]);
 	}
 	for (i=0; i<q; i++)
 	{
