@@ -18,6 +18,7 @@ int main ()
 			else
 				y++;
 		}
-		printf ("%d %d",x,y);
-	}
+		
+	}printf ("%d %d",x,y);
+	return 0;
 }
