@@ -1,19 +1,19 @@
 #include<stdio.h>
 int main()
 {
-	int i,j,k,n,q,b,c,max,l;
-	scanf("%d %d",&n,&q);
+	int i,j,k,n,q,b,c,max,l=0;
+	scanf ("%d %d",&n,&q);
 	char a;
 	int x[n],y[n];
 	
-	for(j=0; j<n; j++)
+	for (j=0; j<n; j++)
     {
-        x[j]=0;
-        y[j]=0;
+        x[j] = 0;
+        y[j] = 0;
     }
 	for (j=0; j<q; j++)
 	{
-		scanf (" %c %ld %ld",&a,&b,&c);
+		scanf (" %c %d %d",&a,&b,&c);
 		if (a == 'U')
 		{
 			x[i-1] = c;
@@ -28,10 +28,14 @@ int main()
 					max = x[c];
 				}
 			}
-			y[l]=max;
+			y[l] = max;
             l++;
 		}
-		printf ("%ld\n",max);
+		
 	}
+	for (j=0; j<l; j++)
+	{
+		printf ("%d\n",y[j]);
+	}	
 	return 0;
 }
