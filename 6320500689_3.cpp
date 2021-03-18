@@ -23,9 +23,9 @@ int main()
 			max = x[i-1];
 			for (k=i; k<c; k++)
 			{
-				if (max < x[c])
+				if (max < x[k])
 				{
-					max = x[c];
+					max = x[k];
 				}
 			}
 			y[l] = max;
